@@ -190,6 +190,42 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
 .jcard p{font-size:12.5px;color:var(--sumi);line-height:1.9;flex:1}
 .jcard .jcta{margin-top:16px;font-size:12px;color:var(--accent-dark);border-bottom:1px solid var(--line);align-self:flex-start;padding-bottom:2px}
 
+.tl{margin:6px 0 28px;padding-left:8px}
+.tlrow{border-left:2px solid var(--line);position:relative;padding:0 0 22px 26px}
+.tlrow:last-child{padding-bottom:4px}
+.tlrow::before{content:"";position:absolute;left:-6px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.tlrow.future::before{background:var(--paper);border:2px solid var(--accent);width:6px;height:6px}
+.tlrow .td{font-size:11.5px;color:var(--muted);letter-spacing:.08em}
+.tlrow .tt{font-size:14.5px;font-weight:700;margin-top:1px}
+.tlrow .tx{font-size:12.5px;color:var(--sumi);margin-top:2px}
+.btn-accent{display:inline-block;background:var(--accent);color:#fff;border-radius:999px;padding:11px 30px;font-size:13px;letter-spacing:.08em;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-accent:hover{background:var(--accent-dark)}
+
+.gate{max-width:460px;margin:30px auto;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:40px 36px;text-align:center}
+.gate .tag{font-size:10.5px;letter-spacing:.3em;color:var(--accent)}
+.gate h2{font-family:var(--serif);font-size:20px;font-weight:600;letter-spacing:.1em;margin-top:10px}
+.gate .desc{font-size:12.5px;color:var(--sumi);margin-top:12px;line-height:1.9}
+.gate input{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:8px;font-size:14px;margin:20px 0 12px;background:var(--paper);font-family:var(--sans)}
+.gate .err{color:var(--accent-dark);font-size:12px;display:none;margin-top:10px}
+.gate .hint{font-size:11.5px;color:var(--muted);margin-top:18px;line-height:1.8;text-align:left}
+
+.memb-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.memb-head h2{font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:.1em}
+.memb-badge{background:#f3e2da;color:var(--accent-dark);font-size:11px;padding:2px 10px;border-radius:3px;margin-left:12px;vertical-align:4px;letter-spacing:.08em}
+.logout{font-size:12px;color:var(--muted);cursor:pointer;border-bottom:1px solid var(--line);padding-bottom:1px}
+.mcard{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:24px 26px;margin-bottom:20px}
+.mcard h3{font-family:var(--serif);font-size:16.5px;font-weight:600;margin-bottom:12px;letter-spacing:.06em}
+.minutes{list-style:none}
+.minutes li{display:flex;gap:14px;align-items:baseline;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px;flex-wrap:wrap}
+.minutes li:last-child{border-bottom:none}
+.minutes .date{font-size:12px;color:var(--muted);min-width:80px}
+.pdf{font-size:10.5px;border:1px solid var(--accent);color:var(--accent-dark);padding:0 8px;border-radius:3px}
+.mlink{margin-left:auto;font-size:12px;color:var(--accent-dark)}
+.fld{width:100%;padding:10px 14px;border:1px solid var(--line);border-radius:8px;font-size:13.5px;background:var(--paper);font-family:var(--sans);color:var(--ink)}
+.ideas .idea{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin-top:10px;font-size:13px;line-height:1.8}
+.idea .im{font-size:11px;color:var(--muted);margin-top:4px}
+.ok-msg{display:none;background:#eaf0df;color:#465e28;border-radius:8px;padding:10px 16px;font-size:12.5px;margin-top:12px}
+
 @media(max-width:720px){
   nav.gnav a{display:none}
   .hero{height:340px}
@@ -488,6 +524,20 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
     </div>
   </section>
 
+  <section id="council-info" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head"><h2>美食のまちづくり推進協議会</h2><span class="en">COUNCIL</span></div>
+      <p class="sec-lead">生産者・料理人・行政がともに、まちの食の未来を議論する協議会。その歩みを公開しています。</p>
+      <div class="tl">
+        <div class="tlrow"><p class="td">2026.06</p><p class="tt">第1回協議会を開催</p><p class="tx">協議会が発足。美食のまちづくりの方針と年間計画を確認しました。</p></div>
+        <div class="tlrow"><p class="td">2026.07</p><p class="tt">第2回協議会を開催</p><p class="tx">重点テーマ（食材・担い手・発信）と、ポータルサイトの活用について議論しました。</p></div>
+        <div class="tlrow future"><p class="td">2026.08（予定）</p><p class="tt">第3回協議会</p><p class="tx">ポータル公開に向けた掲載内容の確認を予定しています。</p></div>
+      </div>
+      <button class="btn-accent" onclick="show('council')">メンバー専用ページへ（議事録・アイデア投稿）</button>
+      <p style="font-size:11.5px;color:var(--muted);margin-top:12px">※ 議事録・投稿機能は協議会メンバー限定です。上記の開催内容はダミーです。</p>
+    </div>
+  </section>
+
   <div class="wrap pn" style="padding-bottom:40px">
     <a href="#top" onclick="show('top')">← 14都市一覧へ戻る</a>
     <a href="#top" onclick="show('top')">次の都市へ →</a>
@@ -501,17 +551,124 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
   </footer>
 </main>
 
+<!-- ============ 協議会メンバー専用（デモ） ============ -->
+<main id="page-council" hidden>
+
+  <div class="wrap crumb"><a href="#top" onclick="show('top')">美食都市連合トップ</a> ＞ <a href="#kyotango" onclick="show('kyotango')">京丹後市</a> ＞ 協議会メンバー専用</div>
+
+  <section style="padding:30px 0 70px">
+    <div class="wrap">
+
+      <div id="gate" class="gate">
+        <p class="tag">MEMBERS ONLY</p>
+        <h2>協議会メンバー専用ページ</h2>
+        <p class="desc">美食のまちづくり推進協議会のメンバーに共有されたパスワードを入力してください。</p>
+        <input type="password" id="pw" placeholder="パスワード" onkeydown="if(event.key==='Enter')unlock()">
+        <button class="btn-accent" onclick="unlock()" style="width:100%">ページを開く</button>
+        <p class="err" id="pw-err">パスワードが違います。</p>
+        <p class="hint">※ デモ用パスワードは「2026」です。<br>※ この画面は動きを確認するためのデモです。実運用ではサーバー側での正式な認証（Basic認証等）を実装し、議事録等の実ファイルはこのモックには一切置いていません。</p>
+      </div>
+
+      <div id="members" hidden>
+        <div class="memb-head">
+          <h2>メンバー専用ページ<span class="memb-badge">デモ</span></h2>
+          <span class="logout" onclick="lock()">ログアウト</span>
+        </div>
+
+        <div class="mcard" style="border-left:4px solid var(--accent);border-radius:0 12px 12px 0">
+          <h3>次回のご案内</h3>
+          <p style="font-size:13.5px">第3回協議会：2026年8月◯日（◯）14:00〜　京丹後市役所 ◯◯会議室</p>
+          <p style="font-size:12px;color:var(--muted);margin-top:4px">議題（予定）：ポータルサイト公開に向けた掲載内容の確認、10月フォーラムの役割分担</p>
+        </div>
+
+        <div class="mcard">
+          <h3>議事録・資料</h3>
+          <ul class="minutes">
+            <li><span class="date">2026.07.◯</span><span>第2回協議会 議事録</span><span class="pdf">PDF</span><a class="mlink" href="#council">閲覧する →</a></li>
+            <li><span class="date">2026.06.◯</span><span>第1回協議会 議事録</span><span class="pdf">PDF</span><a class="mlink" href="#council">閲覧する →</a></li>
+            <li><span class="date">2026.06.◯</span><span>協議会設置要綱・委員名簿</span><span class="pdf">PDF</span><a class="mlink" href="#council">閲覧する →</a></li>
+          </ul>
+          <p style="font-size:11.5px;color:var(--muted);margin-top:10px">※ モックのためファイルは開きません。実運用では権限のあるメンバーのみ閲覧できます。</p>
+        </div>
+
+        <div class="mcard">
+          <h3>アイデア投稿</h3>
+          <p style="font-size:12.5px;color:var(--sumi);margin-bottom:14px">まちづくりのアイデアや現場の気づきを、次の会議を待たずに投稿できます。</p>
+          <select class="fld" id="idea-cat">
+            <option>カテゴリを選ぶ</option>
+            <option>食材・生産</option>
+            <option>観光・体験</option>
+            <option>情報発信</option>
+            <option>その他</option>
+          </select>
+          <textarea class="fld" id="idea-txt" rows="3" placeholder="例：閑散期に、料理人と生産者の交流ツアーができないか" style="margin-top:10px;resize:vertical"></textarea>
+          <button class="btn-accent" onclick="postIdea()" style="margin-top:12px">投稿する</button>
+          <p class="ok-msg" id="idea-ok">投稿しました（デモのため実際には送信されません）。実運用では事務局に届き、次回議題の候補になります。</p>
+          <div class="ideas" id="idea-list">
+            <div class="idea">学校給食で市内産食材をつかう日を「美食都市の日」として発信してはどうか。<div class="im">2026.07.◯｜情報発信</div></div>
+            <div class="idea">直売所と飲食店をつなぐ「今朝の食材」の共有を、もっと手軽にできないか。<div class="im">2026.06.◯｜食材・生産</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="fl"><b>美食都市連合</b><span>GASTRONOMY CITIES JAPAN</span></div>
+      <div>© 2026 一般社団法人 美食都市研究会</div>
+    </div>
+  </footer>
+</main>
+
 <script>
 function show(id){
-  document.getElementById('page-top').hidden = (id !== 'top');
-  document.getElementById('page-kyotango').hidden = (id !== 'kyotango');
+  ['top','kyotango','council'].forEach(function(p){
+    document.getElementById('page-'+p).hidden = (p !== id);
+  });
   window.scrollTo(0,0);
+}
+function unlock(){
+  if(document.getElementById('pw').value === '2026'){
+    document.getElementById('gate').hidden = true;
+    document.getElementById('members').hidden = false;
+    window.scrollTo(0,0);
+  }else{
+    document.getElementById('pw-err').style.display = 'block';
+  }
+}
+function lock(){
+  document.getElementById('members').hidden = true;
+  document.getElementById('gate').hidden = false;
+  document.getElementById('pw').value = '';
+  document.getElementById('pw-err').style.display = 'none';
+  show('kyotango');
+}
+function postIdea(){
+  var t = document.getElementById('idea-txt');
+  var c = document.getElementById('idea-cat');
+  document.getElementById('idea-ok').style.display = 'block';
+  if(t.value.trim()){
+    var d = document.createElement('div');
+    d.className = 'idea';
+    d.textContent = t.value;
+    var m = document.createElement('div');
+    m.className = 'im';
+    m.textContent = 'たったいま｜' + (c.selectedIndex > 0 ? c.value : '未分類');
+    d.appendChild(m);
+    var list = document.getElementById('idea-list');
+    list.insertBefore(d, list.firstChild);
+    t.value = '';
+  }
 }
 window.addEventListener('hashchange',function(){
   if(location.hash === '#kyotango') show('kyotango');
+  else if(location.hash === '#council') show('council');
   else if(location.hash === '#top' || location.hash === '') show('top');
 });
 if(location.hash === '#kyotango') show('kyotango');
+if(location.hash === '#council') show('council');
 </script>
 </body>
 </html>
