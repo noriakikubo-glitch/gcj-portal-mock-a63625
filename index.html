@@ -226,6 +226,46 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
 .idea .im{font-size:11px;color:var(--muted);margin-top:4px}
 .ok-msg{display:none;background:#eaf0df;color:#465e28;border-radius:8px;padding:10px 16px;font-size:12.5px;margin-top:12px}
 
+.mapbox{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:18px 18px 4px;margin-bottom:30px}
+.mapbox svg{width:100%;height:auto;display:block}
+.map-note{font-size:11px;color:var(--muted);text-align:right;padding:6px 4px 10px}
+.region{fill:var(--paper);stroke:#d8d3c4;stroke-width:1}
+.rlabel{font-size:11px;fill:#8a8677;letter-spacing:.14em}
+.cdot{fill:#4a4a44}
+.clabel{font-size:11.5px;fill:#2a2a26}
+.chip-k{cursor:pointer}
+.chip-k circle{fill:#b95233}
+.chip-k text{fill:#8f3c22;font-weight:700}
+
+.qlinks{background:var(--white);border-bottom:1px solid var(--line)}
+.qlinks .wrap{display:flex;gap:10px;padding:12px 24px;flex-wrap:wrap;align-items:center}
+.qlink{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:5px 16px;color:var(--sumi);background:var(--paper)}
+.qlink:hover{border-color:var(--accent);color:var(--accent-dark)}
+.qlabel{font-size:11px;color:var(--muted);letter-spacing:.08em}
+
+.feature{background:var(--white);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;margin-bottom:6px}
+.feature .ph{width:44%;min-height:210px}
+.feature .fbody{flex:1;padding:24px 26px;display:flex;flex-direction:column;justify-content:center}
+.feature .ftag{font-size:11px;color:var(--accent);letter-spacing:.22em}
+.feature h3{font-family:var(--serif);font-size:20px;font-weight:600;line-height:1.8;margin:8px 0 10px}
+.feature p{font-size:13px;color:var(--sumi);line-height:1.9}
+
+.subsec{margin-top:36px}
+.subsec h3{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:.1em;display:flex;align-items:center;gap:12px;margin:0}
+.subsec h3::before{content:"";width:22px;height:1px;background:var(--accent)}
+.subsec .note{font-size:11.5px;color:var(--muted);margin-top:10px}
+.shops{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:16px}
+.shop{background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex}
+.shop .ph{width:104px;min-height:96px;flex-shrink:0}
+.shop .sbody{padding:12px 14px}
+.shop .sname{font-family:var(--serif);font-size:15px;font-weight:600}
+.shop .sdesc{font-size:11.5px;color:var(--sumi);margin-top:4px;line-height:1.7}
+.culrows{margin-top:16px}
+.culrow{display:flex;gap:14px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px}
+.culrow .ph{width:72px;height:54px;border-radius:6px;flex-shrink:0}
+.culrow .cname{font-size:14px;font-weight:700}
+.culrow .cdesc{font-size:12px;color:var(--sumi)}
+
 @media(max-width:720px){
   nav.gnav a{display:none}
   .hero{height:340px}
@@ -233,6 +273,8 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
   .article{flex-direction:row}
   .article .ph{width:96px;height:72px}
   .cityhero h1{font-size:30px}
+  .feature{flex-direction:column}
+  .feature .ph{width:100%;min-height:160px}
 }
 </style>
 </head>
@@ -332,16 +374,44 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
   <section id="cities">
     <div class="wrap">
       <div class="sec-head"><h2>都市をさがす</h2><span class="en">CITIES</span></div>
-      <p class="sec-lead">エリアを選んで、各都市の詳細ページへ。それぞれのまちの食文化と、その担い手に出会えます。</p>
-      <div class="pills">
-        <span class="pill on">すべて</span>
-        <span class="pill">北海道・東北</span>
-        <span class="pill">関東・中部</span>
-        <span class="pill">近畿</span>
-        <span class="pill">中国・四国・九州</span>
+      <p class="sec-lead">全国に広がる美食都市アワード受賞14都市・地域。地図やエリアから、各都市の詳細ページへ。</p>
+      <div class="mapbox">
+        <svg viewBox="0 0 760 440" role="img" aria-label="全国美食都市マップ（デフォルメ地図）">
+          <rect class="region" x="560" y="30" width="150" height="110" rx="14"/><text class="rlabel" x="574" y="52">北海道</text>
+          <rect class="region" x="548" y="160" width="120" height="105" rx="14"/><text class="rlabel" x="562" y="182">東北</text>
+          <rect class="region" x="560" y="285" width="100" height="70" rx="14"/><text class="rlabel" x="574" y="307">関東</text>
+          <rect class="region" x="420" y="215" width="120" height="95" rx="14"/><text class="rlabel" x="434" y="237">中部</text>
+          <rect class="region" x="295" y="265" width="110" height="95" rx="14"/><text class="rlabel" x="309" y="287">近畿</text>
+          <rect class="region" x="165" y="245" width="105" height="60" rx="14"/><text class="rlabel" x="179" y="267">中国</text>
+          <rect class="region" x="215" y="330" width="85" height="55" rx="14"/><text class="rlabel" x="229" y="352">四国</text>
+          <rect class="region" x="55" y="300" width="100" height="105" rx="14"/><text class="rlabel" x="69" y="322">九州</text>
+          <circle class="cdot" cx="604" cy="74" r="3.5"/><text class="clabel" x="614" y="78">余市町</text>
+          <circle class="cdot" cx="664" cy="96" r="3.5"/><text class="clabel" x="674" y="100">帯広市</text>
+          <circle class="cdot" cx="596" cy="122" r="3.5"/><text class="clabel" x="606" y="126">函館市</text>
+          <circle class="cdot" cx="634" cy="198" r="3.5"/><text class="clabel" x="644" y="202">八戸市</text>
+          <circle class="cdot" cx="578" cy="234" r="3.5"/><text class="clabel" x="588" y="238">鶴岡市</text>
+          <circle class="cdot" cx="450" cy="252" r="3.5"/><text class="clabel" x="460" y="256">金沢市</text>
+          <circle class="cdot" cx="438" cy="284" r="3.5"/><text class="clabel" x="448" y="288">坂井市</text>
+          <circle class="cdot" cx="502" cy="264" r="3.5"/><text class="clabel" x="512" y="268">飛騨市</text>
+          <g class="chip-k" onclick="show('kyotango')"><circle cx="330" cy="305" r="5.5"/><text class="clabel" x="341" y="309">京丹後市</text></g>
+          <circle class="cdot" cx="318" cy="340" r="3.5"/><text class="clabel" x="328" y="344">淡路島</text>
+          <circle class="cdot" cx="370" cy="334" r="3.5"/><text class="clabel" x="380" y="338">多気町</text>
+          <circle class="cdot" cx="194" cy="282" r="3.5"/><text class="clabel" x="204" y="286">廿日市市</text>
+          <circle class="cdot" cx="103" cy="340" r="3.5"/><text class="clabel" x="113" y="344">日田市</text>
+          <circle class="cdot" cx="83" cy="372" r="3.5"/><text class="clabel" x="93" y="376">雲仙市</text>
+          <circle cx="70" cy="425" r="4.5" fill="#b95233"/><text class="clabel" x="80" y="429">モデル都市（京丹後市）｜都市名クリックで詳細ページへ</text>
+        </svg>
+        <p class="map-note">※ デフォルメ地図のイメージです（モックでは京丹後市のみクリック可）</p>
       </div>
-      <div class="cities">
-        <a class="city featured" href="#kyotango" onclick="show('kyotango')" style="position:relative">
+      <div class="pills">
+        <span class="pill on" onclick="filterCities('all',this)">すべて</span>
+        <span class="pill" onclick="filterCities('hk',this)">北海道・東北</span>
+        <span class="pill" onclick="filterCities('cb',this)">関東・中部</span>
+        <span class="pill" onclick="filterCities('ki',this)">近畿</span>
+        <span class="pill" onclick="filterCities('ws',this)">中国・四国・九州</span>
+      </div>
+      <div class="cities" id="city-grid">
+        <a class="city featured" data-area="ki" href="#kyotango" onclick="show('kyotango')" style="position:relative">
           <span class="badge">公開イメージ</span>
           <div class="ph dark"><span class="cap">写真：丹後の海</span></div>
           <div class="body">
@@ -349,15 +419,21 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
             <p class="copy">海と大地、丹後の台所。</p>
           </div>
         </a>
-        <div class="city soon"><div class="ph"></div><div class="body"><span class="name">○○市</span><span class="pref">○○県</span><p class="copy">キャッチコピーが入ります。</p></div></div>
-        <div class="city soon"><div class="ph"></div><div class="body"><span class="name">○○市</span><span class="pref">○○県</span><p class="copy">キャッチコピーが入ります。</p></div></div>
-        <div class="city soon"><div class="ph"></div><div class="body"><span class="name">○○市</span><span class="pref">○○県</span><p class="copy">キャッチコピーが入ります。</p></div></div>
-        <div class="city soon"><div class="ph"></div><div class="body"><span class="name">○○市</span><span class="pref">○○県</span><p class="copy">キャッチコピーが入ります。</p></div></div>
-        <div class="city soon"><div class="ph"></div><div class="body"><span class="name">○○市</span><span class="pref">○○県</span><p class="copy">キャッチコピーが入ります。</p></div></div>
-        <div class="city soon"><div class="ph"></div><div class="body"><span class="name">○○市</span><span class="pref">○○県</span><p class="copy">キャッチコピーが入ります。</p></div></div>
-        <div class="city soon"><div class="ph"></div><div class="body"><span class="name">○○市</span><span class="pref">○○県</span><p class="copy">キャッチコピーが入ります。</p></div></div>
+        <div class="city soon" data-area="hk"><div class="ph"></div><div class="body"><span class="name">余市町</span><span class="pref">北海道</span><p class="copy">紹介文が入ります。</p></div></div>
+        <div class="city soon" data-area="hk"><div class="ph"></div><div class="body"><span class="name">帯広市</span><span class="pref">北海道</span><p class="copy">紹介文が入ります。</p></div></div>
+        <div class="city soon" data-area="hk"><div class="ph"></div><div class="body"><span class="name">函館市</span><span class="pref">北海道</span><p class="copy">紹介文が入ります。</p></div></div>
+        <div class="city soon" data-area="hk"><div class="ph"></div><div class="body"><span class="name">八戸市</span><span class="pref">青森県</span><p class="copy">紹介文が入ります。</p></div></div>
+        <div class="city soon" data-area="hk"><div class="ph"></div><div class="body"><span class="name">鶴岡市</span><span class="pref">山形県</span><p class="copy">紹介文が入ります。</p></div></div>
+        <div class="city soon" data-area="cb"><div class="ph"></div><div class="body"><span class="name">金沢市</span><span class="pref">石川県</span><p class="copy">紹介文が入ります。</p></div></div>
+        <div class="city soon" data-area="cb"><div class="ph"></div><div class="body"><span class="name">坂井市</span><span class="pref">福井県</span><p class="copy">紹介文が入ります。</p></div></div>
+        <div class="city soon" data-area="cb"><div class="ph"></div><div class="body"><span class="name">飛騨市</span><span class="pref">岐阜県</span><p class="copy">紹介文が入ります。</p></div></div>
+        <div class="city soon" data-area="ki"><div class="ph"></div><div class="body"><span class="name">多気町</span><span class="pref">三重県</span><p class="copy">紹介文が入ります。</p></div></div>
+        <div class="city soon" data-area="ki"><div class="ph"></div><div class="body"><span class="name">淡路島エリア</span><span class="pref">兵庫県</span><p class="copy">紹介文が入ります。</p></div></div>
+        <div class="city soon" data-area="ws"><div class="ph"></div><div class="body"><span class="name">廿日市市</span><span class="pref">広島県</span><p class="copy">紹介文が入ります。</p></div></div>
+        <div class="city soon" data-area="ws"><div class="ph"></div><div class="body"><span class="name">日田市</span><span class="pref">大分県</span><p class="copy">紹介文が入ります。</p></div></div>
+        <div class="city soon" data-area="ws"><div class="ph"></div><div class="body"><span class="name">雲仙市</span><span class="pref">長崎県</span><p class="copy">紹介文が入ります。</p></div></div>
       </div>
-      <p class="series-note">※ モックでは8都市のみ表示。実装時は受賞14都市がすべて並びます。</p>
+      <p class="series-note">※ 受賞14都市・地域（仕様書別記に基づく）。京丹後市以外のページは順次公開予定です。</p>
     </div>
   </section>
 
@@ -466,6 +542,15 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
     </div>
   </div>
 
+  <div class="qlinks">
+    <div class="wrap">
+      <span class="qlabel">公式リンク</span>
+      <a class="qlink" href="#kyotango">京丹後市観光公社 ↗</a>
+      <a class="qlink" href="#kyotango">ふるさと納税 ↗</a>
+      <a class="qlink" href="#kyotango">京丹後市公式サイト ↗</a>
+    </div>
+  </div>
+
   <section style="padding-bottom:40px">
     <div class="wrap">
       <p class="lead">日本海と丹後の大地が育む食材と、その担い手たち。<br>生産者・料理人・食文化の現場を訪ね、京丹後の「美食のみなもと」を全12回の連載で紹介します。</p>
@@ -474,16 +559,45 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
 
   <section style="padding-top:0">
     <div class="wrap">
-      <div class="sec-head"><h2>読みもの</h2><span class="en">STORIES</span><a class="more" href="#kyotango">すべてみる</a></div>
-      <p class="sec-lead">連載・全12回（2026年9月より順次公開）</p>
-      <div class="articles">
-        <a class="article" href="#kyotango">
-          <div class="ph crab"><span class="cap">写真：間人漁港</span></div>
-          <div>
-            <h3>間人ガニと生きる — 底曳き網漁師の冬<span class="new">新着</span></h3>
-            <p class="meta">2026.09.10　取材記事｜漁業</p>
-          </div>
-        </a>
+      <div class="sec-head"><h2>読みもの</h2><span class="en">STORIES</span></div>
+      <p class="sec-lead">取材記事・全12回（2026年9月より順次公開）</p>
+
+      <a class="feature" href="#kyotango">
+        <div class="ph crab"><span class="cap">写真：間人漁港</span></div>
+        <div class="fbody">
+          <span class="ftag">メイン記事</span>
+          <h3>間人ガニと生きる — 底曳き網漁師の冬</h3>
+          <p>冬の丹後の海に出る漁師たちの一日と、「幻のカニ」と呼ばれる間人ガニがまちにもたらしてきたもの。（リード文はダミーです）</p>
+        </div>
+      </a>
+
+      <div class="subsec">
+        <h3>店舗紹介</h3>
+        <div class="shops">
+          <div class="shop"><div class="ph dark"><span class="cap">写真</span></div><div class="sbody"><p class="sname">○○屋</p><p class="sdesc">店舗の紹介文が入ります。料理の写真と店主のことば。</p></div></div>
+          <div class="shop"><div class="ph ferment"><span class="cap">写真</span></div><div class="sbody"><p class="sname">○○亭</p><p class="sdesc">店舗の紹介文が入ります。料理の写真と店主のことば。</p></div></div>
+        </div>
+        <p class="note">※ 掲載店舗は美食のまちづくり推進協議会での選定を想定（公平性確保のため掲載基準を協議のうえ決定）。</p>
+      </div>
+
+      <div class="subsec">
+        <h3>食文化</h3>
+        <div class="culrows">
+          <div class="culrow"><div class="ph rice"><span class="cap">写真</span></div><div><p class="cname">ばらずし</p><p class="cdesc">ハレの日の郷土寿司。家庭ごとの味と、受け継がれる作法。</p></div></div>
+          <div class="culrow"><div class="ph ferment"><span class="cap">写真</span></div><div><p class="cname">発酵・保存食</p><p class="cdesc">海と冬の暮らしが育てた、保存の知恵。</p></div></div>
+        </div>
+      </div>
+
+      <div class="subsec">
+        <h3>体験</h3>
+        <div class="culrows">
+          <div class="culrow"><div class="ph"><span class="cap">写真</span></div><div><p class="cname">（体験コンテンツを掲載予定）</p><p class="cdesc">漁港・農園・台所をめぐる体験プログラムを想定しています。</p></div></div>
+        </div>
+      </div>
+
+      <div class="subsec">
+        <h3>その他の記事</h3>
+      <div class="articles" style="margin-top:16px">
         <a class="article" href="#kyotango">
           <div class="ph rice"><span class="cap">写真：丹後の棚田</span></div>
           <div>
@@ -506,7 +620,8 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
           </div>
         </a>
       </div>
-      <p class="series-note">※ 記事タイトルはイメージです。テーマ・取材先は市と協議のうえ決定します。</p>
+      </div>
+      <p class="series-note">※ 記事タイトル・店舗名・構成はイメージです。掲載内容は市と協議のうえ決定します。</p>
     </div>
   </section>
 
@@ -661,6 +776,13 @@ function postIdea(){
     list.insertBefore(d, list.firstChild);
     t.value = '';
   }
+}
+function filterCities(area, el){
+  document.querySelectorAll('.pills .pill').forEach(function(p){ p.classList.remove('on'); });
+  el.classList.add('on');
+  document.querySelectorAll('#city-grid .city').forEach(function(c){
+    c.style.display = (area === 'all' || c.dataset.area === area) ? '' : 'none';
+  });
 }
 window.addEventListener('hashchange',function(){
   if(location.hash === '#kyotango') show('kyotango');
