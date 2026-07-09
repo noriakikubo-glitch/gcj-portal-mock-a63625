@@ -36,6 +36,7 @@ img{max-width:100%}
 .logo{cursor:pointer;line-height:1.3}
 .logo b{font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:.12em}
 .logo span{display:block;font-size:9.5px;letter-spacing:.28em;color:var(--muted)}
+.kari{font-style:normal;font-size:9.5px;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:1px 6px;margin-left:8px;vertical-align:3px;letter-spacing:.1em}
 nav.gnav{display:flex;align-items:center;gap:26px;font-size:13.5px}
 nav.gnav a{padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s}
 nav.gnav a:hover{border-color:var(--accent)}
@@ -280,12 +281,12 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
 </head>
 <body>
 
-<div class="mocknote"><strong>デザインモック（2026年7月版）</strong>｜掲載の文言・写真・記事名・都市名はすべて仮のイメージです</div>
+<div class="mocknote"><strong>デザインモック v3（2026.7.13 仕様打合せ用）</strong>｜サイト名称・文言・写真・記事名はすべて仮のイメージです</div>
 
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="#top" onclick="show('top')">
-      <b>美食都市連合</b>
+      <b>美食都市連合<em class="kari">名称仮</em></b>
       <span>GASTRONOMY CITIES JAPAN</span>
     </a>
     <nav class="gnav">
@@ -417,6 +418,7 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
           <div class="body">
             <span class="name">京丹後市</span><span class="pref">京都府</span>
             <p class="copy">海と大地、丹後の台所。</p>
+            <p style="margin-top:8px;font-size:11.5px;color:var(--accent-dark)">詳細はこちら →</p>
           </div>
         </a>
         <div class="city soon" data-area="hk"><div class="ph"></div><div class="body"><span class="name">余市町</span><span class="pref">北海道</span><p class="copy">紹介文が入ります。</p></div></div>
@@ -493,7 +495,7 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
         <div class="jcard">
           <span class="who">自治体のみなさま</span>
           <h3>連合への加盟</h3>
-          <p>共同での情報発信、都市ページの開設、先行都市の実践知の共有。食によるまちづくりを、単独ではなく連携で進められます。</p>
+          <p>共同での情報発信、都市ページの開設、先行都市の実践知の共有。都市ページは各市がCMSで自ら更新でき、取材記事の制作を研究会へ依頼することもできます（有償）。</p>
           <span class="jcta">加盟について問い合わせる →</span>
         </div>
         <div class="jcard">
@@ -642,11 +644,11 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
   <section id="council-info" style="border-top:1px solid var(--line)">
     <div class="wrap">
       <div class="sec-head"><h2>美食のまちづくり推進協議会</h2><span class="en">COUNCIL</span></div>
-      <p class="sec-lead">生産者・料理人・行政がともに、まちの食の未来を議論する協議会。その歩みを公開しています。</p>
+      <p class="sec-lead">生産者・料理人・行政がともに、まちの食の未来を議論する協議会・プラン策定委員会。その歩みを公開しています。</p>
       <div class="tl">
         <div class="tlrow"><p class="td">2026.06</p><p class="tt">第1回協議会を開催</p><p class="tx">協議会が発足。美食のまちづくりの方針と年間計画を確認しました。</p></div>
         <div class="tlrow"><p class="td">2026.07</p><p class="tt">第2回協議会を開催</p><p class="tx">重点テーマ（食材・担い手・発信）と、ポータルサイトの活用について議論しました。</p></div>
-        <div class="tlrow future"><p class="td">2026.08（予定）</p><p class="tt">第3回協議会</p><p class="tx">ポータル公開に向けた掲載内容の確認を予定しています。</p></div>
+        <div class="tlrow future"><p class="td">2026.07.29（予定）</p><p class="tt">プラン策定委員会</p><p class="tx">事前勉強会13:00〜、本会議13:30〜。先行都市の事例講話を予定しています。</p></div>
       </div>
       <button class="btn-accent" onclick="show('council')">メンバー専用ページへ（議事録・アイデア投稿）</button>
       <p style="font-size:11.5px;color:var(--muted);margin-top:12px">※ 議事録・投稿機能は協議会メンバー限定です。上記の開催内容はダミーです。</p>
@@ -669,15 +671,15 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
 <!-- ============ 協議会メンバー専用（デモ） ============ -->
 <main id="page-council" hidden>
 
-  <div class="wrap crumb"><a href="#top" onclick="show('top')">美食都市連合トップ</a> ＞ <a href="#kyotango" onclick="show('kyotango')">京丹後市</a> ＞ 協議会メンバー専用</div>
+  <div class="wrap crumb"><a href="#top" onclick="show('top')">美食都市連合トップ</a> ＞ <a href="#kyotango" onclick="show('kyotango')">京丹後市</a> ＞ メンバー専用ページ</div>
 
   <section style="padding:30px 0 70px">
     <div class="wrap">
 
       <div id="gate" class="gate">
         <p class="tag">MEMBERS ONLY</p>
-        <h2>協議会メンバー専用ページ</h2>
-        <p class="desc">美食のまちづくり推進協議会のメンバーに共有されたパスワードを入力してください。</p>
+        <h2>メンバー専用ページ</h2>
+        <p class="desc">協議会・プラン策定委員会・部会のメンバーに共有されたパスワードを入力してください。</p>
         <input type="password" id="pw" placeholder="パスワード" onkeydown="if(event.key==='Enter')unlock()">
         <button class="btn-accent" onclick="unlock()" style="width:100%">ページを開く</button>
         <p class="err" id="pw-err">パスワードが違います。</p>
@@ -691,19 +693,31 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
         </div>
 
         <div class="mcard" style="border-left:4px solid var(--accent);border-radius:0 12px 12px 0">
-          <h3>次回のご案内</h3>
-          <p style="font-size:13.5px">第3回協議会：2026年8月◯日（◯）14:00〜　京丹後市役所 ◯◯会議室</p>
-          <p style="font-size:12px;color:var(--muted);margin-top:4px">議題（予定）：ポータルサイト公開に向けた掲載内容の確認、10月フォーラムの役割分担</p>
+          <h3>お知らせ・次回のご予定</h3>
+          <ul class="minutes">
+            <li><span class="date">2026.07.29</span><span>プラン策定委員会（事前勉強会 13:00〜／本会議 13:30〜15:00）</span></li>
+            <li><span class="date">調整中</span><span>各部会のオンライン会議（日程が決まり次第、ここでお知らせします）</span></li>
+          </ul>
         </div>
 
         <div class="mcard">
           <h3>議事録・資料</h3>
+          <p style="font-size:12px;color:var(--muted);margin:0 0 4px">会議体ごとに議事録・資料を保管します。</p>
+          <p style="font-size:12.5px;font-weight:700;margin-top:10px">美食のまちづくり推進協議会</p>
           <ul class="minutes">
             <li><span class="date">2026.07.◯</span><span>第2回協議会 議事録</span><span class="pdf">PDF</span><a class="mlink" href="#council">閲覧する →</a></li>
             <li><span class="date">2026.06.◯</span><span>第1回協議会 議事録</span><span class="pdf">PDF</span><a class="mlink" href="#council">閲覧する →</a></li>
-            <li><span class="date">2026.06.◯</span><span>協議会設置要綱・委員名簿</span><span class="pdf">PDF</span><a class="mlink" href="#council">閲覧する →</a></li>
           </ul>
-          <p style="font-size:11.5px;color:var(--muted);margin-top:10px">※ モックのためファイルは開きません。実運用では権限のあるメンバーのみ閲覧できます。</p>
+          <p style="font-size:12.5px;font-weight:700;margin-top:14px">プラン策定委員会</p>
+          <ul class="minutes">
+            <li><span class="date">2026.07.◯</span><span>第1回委員会 議事録</span><span class="pdf">PDF</span><a class="mlink" href="#council">閲覧する →</a></li>
+            <li><span class="date">2026.07.◯</span><span>3分ピッチ 事前記入シート</span><span class="pdf">PDF</span><a class="mlink" href="#council">閲覧する →</a></li>
+          </ul>
+          <p style="font-size:12.5px;font-weight:700;margin-top:14px">部会</p>
+          <ul class="minutes">
+            <li><span class="date">2026.07.◯</span><span>○○部会 議事メモ（部会ごとに保管し、他部会の議論も見えるように）</span><span class="pdf">PDF</span><a class="mlink" href="#council">閲覧する →</a></li>
+          </ul>
+          <p style="font-size:11.5px;color:var(--muted);margin-top:12px">※ モックのためファイルは開きません。実運用では市事務局・研究会の双方が更新でき、権限のあるメンバーのみ閲覧できます。</p>
         </div>
 
         <div class="mcard">
