@@ -96,6 +96,9 @@ section{padding:64px 0}
 .city.soon{opacity:.75}
 .city.soon .ph::before{content:"準備中";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:.3em;color:rgba(42,42,38,.45);z-index:2}
 
+.stag{display:inline-block;font-size:10.5px;padding:1px 10px;border-radius:3px;letter-spacing:.08em;margin-right:8px;vertical-align:1px}
+.stag.open{background:var(--accent);color:#fff}
+.stag.prep{background:#eceadf;color:var(--sumi)}
 .stories{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px}
 .story{background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .story .ph{height:150px}
@@ -294,6 +297,7 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
       <a href="#teigi" onclick="show('top')">美食都市とは</a>
       <a href="#cities" onclick="show('top')">都市をさがす</a>
       <a href="#stories" onclick="show('top')">読みもの</a>
+      <a href="#programs" onclick="show('top')">体験</a>
       <a href="#join" onclick="show('top')">参画案内</a>
       <span class="lang">JP / EN</span>
     </nav>
@@ -472,6 +476,47 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
     </div>
   </section>
 
+  <section id="programs" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head"><h2>体験プログラム</h2><span class="en">EXPERIENCE</span><a class="more" href="#programs">すべてみる</a></div>
+      <p class="sec-lead">読んで、訪ねて、味わう。各都市の食の現場を訪ねる体験プログラムを掲載します。</p>
+      <div class="pills">
+        <span class="pill on">すべて</span>
+        <span class="pill">募集中</span>
+        <span class="pill">春</span>
+        <span class="pill">夏</span>
+        <span class="pill">秋</span>
+        <span class="pill">冬</span>
+      </div>
+      <div class="stories">
+        <div class="story">
+          <div class="ph crab"><span class="cap">写真イメージ</span></div>
+          <div class="body">
+            <span class="stag open">募集中</span><span class="city-tag">京丹後市</span>
+            <h3>間人漁港のセリ見学と、浜のまかない朝ごはん</h3>
+            <p class="meta">冬季開催｜プログラム名はダミーです</p>
+          </div>
+        </div>
+        <div class="story">
+          <div class="ph rice"><span class="cap">写真イメージ</span></div>
+          <div class="body">
+            <span class="stag prep">準備中</span><span class="city-tag">京丹後市</span>
+            <h3>丹後ばらずし、台所でならう郷土の味</h3>
+            <p class="meta">通年｜プログラム名はダミーです</p>
+          </div>
+        </div>
+        <div class="story">
+          <div class="ph"><span class="cap">写真イメージ</span></div>
+          <div class="body">
+            <span class="stag prep">準備中</span><span class="city-tag">○○市</span>
+            <h3>（各都市の体験プログラムが入ります）</h3>
+            <p class="meta">募集状況・エリア・季節で絞り込める想定です</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="global" id="global">
     <div class="wrap">
       <div class="sec-head"><h2>世界とつながる</h2><span class="en">GLOBAL</span></div>
@@ -595,6 +640,7 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
         <div class="culrows">
           <div class="culrow"><div class="ph"><span class="cap">写真</span></div><div><p class="cname">（体験コンテンツを掲載予定）</p><p class="cdesc">漁港・農園・台所をめぐる体験プログラムを想定しています。</p></div></div>
         </div>
+        <p class="note">※ 京丹後の体験は、連合トップの「体験プログラム」一覧にも掲載される想定です。</p>
       </div>
 
       <div class="subsec">
