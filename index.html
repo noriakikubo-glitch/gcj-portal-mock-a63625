@@ -41,6 +41,18 @@ nav.gnav{display:flex;align-items:center;gap:26px;font-size:13.5px}
 nav.gnav a{padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s}
 nav.gnav a:hover{border-color:var(--accent)}
 .lang{border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:12px;color:var(--sumi)}
+.govbtn{background:var(--accent);color:#fff;border-radius:999px;padding:7px 18px;font-size:12.5px;letter-spacing:.04em;cursor:pointer}
+.govbtn:hover{background:var(--accent-dark)}
+.ghero{background:var(--sea);color:#fff;padding:70px 0 60px}
+.ghero .tagline{font-size:11px;letter-spacing:.3em;color:#e0b6a5;margin-bottom:14px}
+.ghero h1{font-family:var(--serif);font-size:clamp(24px,3.6vw,38px);font-weight:500;letter-spacing:.12em;line-height:1.8}
+.ghero p.sub{margin-top:14px;font-size:14px;color:#d9d5c7;line-height:2}
+.ghero .gcta{display:inline-block;margin-top:24px;background:var(--accent);color:#fff;border-radius:999px;padding:11px 30px;font-size:13.5px;letter-spacing:.08em}
+.ghero .gcta:hover{background:var(--accent-dark)}
+.flowstep{display:flex;gap:16px;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-bottom:12px}
+.flowstep .fno{font-family:var(--serif);font-size:20px;color:var(--accent);min-width:64px;letter-spacing:.1em}
+.flowstep .ft{font-size:15px;font-weight:700}
+.flowstep .fd{font-size:12.5px;color:var(--sumi);margin-top:3px;line-height:1.8}
 
 .ph{position:relative;background:linear-gradient(135deg,#ddd7c8,#c9c2b0);overflow:hidden}
 .ph::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 14px,rgba(255,255,255,.16) 14px 15px)}
@@ -284,7 +296,7 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
 </head>
 <body>
 
-<div class="mocknote"><strong>デザインモック v3（2026.7.13 仕様打合せ用）</strong>｜サイト名称・文言・写真・記事名はすべて仮のイメージです</div>
+<div class="mocknote"><strong>デザインモック v4（2026.7.13 打合せ用）</strong>｜二面構成: 一般消費者向け × 自治体・連携向け｜名称・文言・写真・記事名はすべて仮</div>
 
 <header class="site-header">
   <div class="wrap">
@@ -293,13 +305,12 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
       <span>GASTRONOMY CITIES JAPAN</span>
     </a>
     <nav class="gnav">
-      <a href="#vision" onclick="show('top')">連合について</a>
-      <a href="#teigi" onclick="show('top')">美食都市とは</a>
       <a href="#cities" onclick="show('top')">都市をさがす</a>
       <a href="#stories" onclick="show('top')">読みもの</a>
-      <a href="#programs" onclick="show('top')">体験</a>
-      <a href="#join" onclick="show('top')">参画案内</a>
+      <a href="#programs" onclick="show('top')">体験プログラム</a>
+      <a href="#news" onclick="show('top')">お知らせ</a>
       <span class="lang">JP / EN</span>
+      <span class="govbtn" onclick="show('gov')">自治体・連携の方へ</span>
     </nav>
   </div>
 </header>
@@ -310,13 +321,13 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
   <div class="hero ph dark">
     <span class="cap">写真イメージ：丹後の海と食卓（全都市の写真をスライド表示）</span>
     <div class="inner">
-      <h1>食が、まちの未来をつくる。</h1>
-      <p class="sub">美食都市アワードを受賞した全国14都市がつながるポータルサイト</p>
-      <a class="cta" href="#cities">14の都市をみる</a>
+      <h1>日本の美食都市を、旅する。</h1>
+      <p class="sub">食文化が息づく全国14のまちへ。読んで、訪ねて、味わう。</p>
+      <a class="cta" href="#cities">美食都市をさがす</a>
     </div>
   </div>
 
-  <div class="news">
+  <div class="news" id="news">
     <div class="wrap">
       <div class="sec-head" style="margin-bottom:14px">
         <h2 style="font-size:19px">お知らせ</h2><span class="en">NEWS</span><a class="more" href="#top">一覧へ</a>
@@ -328,53 +339,6 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
       </ul>
     </div>
   </div>
-
-  <section id="vision">
-    <div class="wrap">
-      <div class="sec-head"><h2>連合がめざすもの</h2><span class="en">VISION</span></div>
-      <p class="sec-lead">観光にとどまらず、食で地域そのものを活性化する。美食都市連合は、その実践知を共有し、日本の美食都市を世界へひらく枠組みです。</p>
-      <div class="vision-grid">
-        <div class="vcard">
-          <span class="no">01</span>
-          <h3>世界への発信</h3>
-          <p>日本各地の食文化と、その担い手の物語を編集し、国内外に発信します。美食は、都市が世界と対話するための言語です。</p>
-        </div>
-        <div class="vcard">
-          <span class="no">02</span>
-          <h3>食によるまちづくりのモデル</h3>
-          <p>生産者・料理人・行政がつながり、食が産業として地域の経済を動かす。各都市の実践を共有し、再現可能なモデルへ育てます。</p>
-        </div>
-        <div class="vcard">
-          <span class="no">03</span>
-          <h3>世界の美食都市との交流</h3>
-          <p>World Region of Gastronomy をはじめとする世界の美食地域とつながり、学び合いと相互発信の関係を築きます。</p>
-        </div>
-      </div>
-      <div class="roadmap">
-        <div class="rstep"><span class="rl">現在</span><span class="rt">アワード受賞 14都市</span><span class="rs">連合として共同発信を開始</span></div>
-        <div class="rstep"><span class="rl">これから</span><span class="rt">定義・指標づくり</span><span class="rs">日本における美食都市の基準を整備</span></div>
-        <div class="rstep"><span class="rl">目標</span><span class="rt">全国20都市の連合へ</span><span class="rs">食によるまちづくりを日本のモデルに</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="def" id="teigi">
-    <div class="wrap">
-      <div class="sec-head"><h2>美食都市とは</h2><span class="en">DEFINITION</span></div>
-      <p class="sec-lead">連合では、日本における「美食都市」の定義と評価の視点を、専門家とともに整備していきます。</p>
-      <div class="def-state">
-        <p class="big">豊かな食材とその担い手が正当に評価され、<br>食がまちの経済と文化を動かしている都市。</p>
-        <p class="note">※ 定義・評価指標は検討中の案です。研究者・専門家との協働により策定を進めます。</p>
-      </div>
-      <div class="axes">
-        <div class="axis"><span class="an">視点 1</span><h4>食材と生産者</h4><p>地域の食材が、地域のなかで価値になっているか。</p></div>
-        <div class="axis"><span class="an">視点 2</span><h4>食の担い手</h4><p>料理人や職人が育ち、挑戦できる環境があるか。</p></div>
-        <div class="axis"><span class="an">視点 3</span><h4>食文化の継承</h4><p>郷土の食が、暮らしのなかで次世代へ受け継がれているか。</p></div>
-        <div class="axis"><span class="an">視点 4</span><h4>産業化と経済循環</h4><p>食が観光・物販・雇用へ広がり、まちの経済を動かしているか。</p></div>
-        <div class="axis"><span class="an">視点 5</span><h4>持続可能性</h4><p>一次産業と環境の未来に責任をもつ食のあり方か。</p></div>
-      </div>
-    </div>
-  </section>
 
   <section id="cities">
     <div class="wrap">
@@ -517,6 +481,103 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
     </div>
   </section>
 
+  <section class="about">
+    <div class="wrap">
+      <h2>美食都市連合とは</h2>
+      <p>美食都市アワードを受賞した全国14の都市が、食文化を軸にしたまちづくりの知見と実践を共有し、国内外へ発信していく連携の枠組みです。将来的には全国20都市への広がりをめざしています。本サイトは、その共通の発信拠点として運営されています。</p>
+      <p class="org">運営：一般社団法人 美食都市研究会　<a href="https://www.gastronomy-city.org/" target="_blank" rel="noopener">研究会サイトへ ↗</a></p>
+      <p style="text-align:center;margin-top:26px"><span class="govbtn" onclick="show('gov')" style="padding:11px 32px;font-size:13.5px">自治体・連携をご検討の方へ →</span></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="fl"><b>美食都市連合</b><span>GASTRONOMY CITIES JAPAN</span></div>
+      <div>© 2026 一般社団法人 美食都市研究会</div>
+    </div>
+  </footer>
+</main>
+
+
+<!-- ============ 自治体・連携の方へ ============ -->
+<main id="page-gov" hidden>
+
+  <div class="ghero">
+    <div class="wrap">
+      <p class="tagline">FOR MUNICIPALITIES &amp; PARTNERS</p>
+      <h1>食で、まちを立て直す。<br>その方法論と、仲間がここにあります。</h1>
+      <p class="sub">美食都市連合（仮称）は、美食都市アワード受賞都市による実践コミュニティです。<br>自治体・DMO・地域の食の担い手の方へ、連携の枠組みをご案内します。</p>
+      <a class="gcta" href="https://gastronomy-diagnosis.netlify.app/" target="_blank" rel="noopener">まず、あなたのまちを診断する（無料・10分）</a>
+    </div>
+  </div>
+
+  <section id="vision">
+    <div class="wrap">
+      <div class="sec-head"><h2>連合がめざすもの</h2><span class="en">VISION</span></div>
+      <p class="sec-lead">観光にとどまらず、食で地域そのものを活性化する。連合は、その実践知を自治体どうしで共有し、日本の美食都市を世界へひらく枠組みです。</p>
+      <div class="vision-grid">
+        <div class="vcard">
+          <span class="no">01</span>
+          <h3>世界への発信</h3>
+          <p>日本各地の食文化と、その担い手の物語を編集し、国内外に発信します。美食は、都市が世界と対話するための言語です。</p>
+        </div>
+        <div class="vcard">
+          <span class="no">02</span>
+          <h3>食によるまちづくりのモデル</h3>
+          <p>生産者・料理人・行政がつながり、食が産業として地域の経済を動かす。各都市の実践を共有し、再現可能なモデルへ育てます。</p>
+        </div>
+        <div class="vcard">
+          <span class="no">03</span>
+          <h3>世界の美食都市との交流</h3>
+          <p>World Region of Gastronomy をはじめとする世界の美食地域とつながり、学び合いと相互発信の関係を築きます。</p>
+        </div>
+      </div>
+      <div class="roadmap">
+        <div class="rstep"><span class="rl">現在</span><span class="rt">アワード受賞 14都市</span><span class="rs">連合として共同発信を開始</span></div>
+        <div class="rstep"><span class="rl">これから</span><span class="rt">定義・指標づくり</span><span class="rs">日本における美食都市の基準を整備</span></div>
+        <div class="rstep"><span class="rl">目標</span><span class="rt">全国20都市の連合へ</span><span class="rs">食によるまちづくりを日本のモデルに</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="def" id="teigi">
+    <div class="wrap">
+      <div class="sec-head"><h2>美食都市とは</h2><span class="en">DEFINITION</span></div>
+      <p class="sec-lead">連合では、日本における「美食都市」の定義と評価の視点を、専門家とともに整備していきます。</p>
+      <div class="def-state">
+        <p class="big">豊かな食材とその担い手が正当に評価され、<br>食がまちの経済と文化を動かしている都市。</p>
+        <p class="note">※ 定義・評価指標は検討中の案です。研究者・専門家との協働により策定を進めます。</p>
+      </div>
+      <div class="axes">
+        <div class="axis"><span class="an">視点 1</span><h4>食材と生産者</h4><p>地域の食材が、地域のなかで価値になっているか。</p></div>
+        <div class="axis"><span class="an">視点 2</span><h4>食の担い手</h4><p>料理人や職人が育ち、挑戦できる環境があるか。</p></div>
+        <div class="axis"><span class="an">視点 3</span><h4>食文化の継承</h4><p>郷土の食が、暮らしのなかで次世代へ受け継がれているか。</p></div>
+        <div class="axis"><span class="an">視点 4</span><h4>産業化と経済循環</h4><p>食が観光・物販・雇用へ広がり、まちの経済を動かしているか。</p></div>
+        <div class="axis"><span class="an">視点 5</span><h4>持続可能性</h4><p>一次産業と環境の未来に責任をもつ食のあり方か。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--white);border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head"><h2>参加までの流れ</h2><span class="en">HOW TO JOIN</span></div>
+      <p class="sec-lead">アワードは推薦・招待制。まずは現在地を知ることから始まります。</p>
+      <div class="flowstep">
+        <div class="fno">STEP 1</div>
+        <div><p class="ft">セルフ診断（無料）</p><p class="fd">Webで18問、約10分。6つの視点であなたのまちの食文化力をスコア化します。→ <a href="https://gastronomy-diagnosis.netlify.app/" target="_blank" rel="noopener" style="color:var(--accent-dark);border-bottom:1px solid var(--line)">美食都市 簡易診断ツール</a></p></div>
+      </div>
+      <div class="flowstep">
+        <div class="fno">STEP 2</div>
+        <div><p class="ft">庁内勉強会・詳細診断</p><p class="fd">研究会の出張勉強会（オンライン可）で庁内の共通言語をつくり、専門家による詳細診断・伴走支援へ。京丹後市もここから始まりました。</p></div>
+      </div>
+      <div class="flowstep">
+        <div class="fno">STEP 3</div>
+        <div><p class="ft">美食都市アワードへ立候補</p><p class="fd">審査会のノミネート（推薦・招待制）を受けた都市が「立候補ファイル」を提出。2軸評価（資源診断×まちづくり診断）により、受賞3都市程度＋ファイナリスト2都市程度を選定・公表します。受賞都市は美食都市連合に加わります。</p></div>
+      </div>
+      <p style="font-size:11.5px;color:var(--muted);margin-top:10px">※ 制度の詳細は検討案です。「美食都市入門」（自治体職員向け資料・無料）をご希望の方は下記お問い合わせから。</p>
+    </div>
+  </section>
+
   <section class="global" id="global">
     <div class="wrap">
       <div class="sec-head"><h2>世界とつながる</h2><span class="en">GLOBAL</span></div>
@@ -561,9 +622,10 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
 
   <section class="about">
     <div class="wrap">
-      <h2>美食都市連合とは</h2>
-      <p>美食都市アワードを受賞した全国14の都市が、食文化を軸にしたまちづくりの知見と実践を共有し、国内外へ発信していく連携の枠組みです。将来的には全国20都市への広がりをめざしています。本サイトは、その共通の発信拠点として運営されています。</p>
-      <p class="org">運営：一般社団法人 美食都市研究会　<a href="https://www.gastronomy-city.org/" target="_blank" rel="noopener">研究会サイトへ ↗</a></p>
+      <h2>お問い合わせ</h2>
+      <p>連合への参画、勉強会・診断のご相談、協議会メンバーページのご利用は、美食都市研究会（連合事務局）までお気軽にどうぞ。</p>
+      <p class="org">一般社団法人 美食都市研究会　noriaki.kubo@gastronomy-city.org<br><span style="font-size:11.5px;color:#9fb3a8">協議会・委員会のメンバーの方 → <a href="#council" onclick="show('council')" style="border-bottom:1px solid rgba(255,255,255,.4)">メンバー専用ページ</a></span></p>
+      <p style="text-align:center;margin-top:26px"><span class="govbtn" onclick="show('top')" style="background:transparent;border:1px solid rgba(255,255,255,.5)">← 旅する方のページへ戻る</span></p>
     </div>
   </section>
 
@@ -799,7 +861,7 @@ footer .fl span{display:block;font-size:11px;margin-top:4px}
 
 <script>
 function show(id){
-  ['top','kyotango','council'].forEach(function(p){
+  ['top','gov','kyotango','council'].forEach(function(p){
     document.getElementById('page-'+p).hidden = (p !== id);
   });
   window.scrollTo(0,0);
@@ -846,10 +908,12 @@ function filterCities(area, el){
 }
 window.addEventListener('hashchange',function(){
   if(location.hash === '#kyotango') show('kyotango');
+  else if(location.hash === '#gov') show('gov');
   else if(location.hash === '#council') show('council');
   else if(location.hash === '#top' || location.hash === '') show('top');
 });
 if(location.hash === '#kyotango') show('kyotango');
+if(location.hash === '#gov') show('gov');
 if(location.hash === '#council') show('council');
 </script>
 </body>
